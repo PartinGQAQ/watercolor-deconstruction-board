@@ -5,7 +5,7 @@ description: Convert a supplied photo or illustration into an easy-to-paint, hig
 
 # Watercolor Deconstruction Board
 
-Create one coherent watercolor study board from the user's reference image. Make every element easy for a beginner or casual painter to reproduce. Favor simple silhouettes, broad washes, lightly cartoonized forms, and useful color-mixing relationships over realism, detail, or decoration.
+Create one coherent watercolor study board from the user's reference image. Make every element easy for a beginner or casual painter to reproduce. Favor simple silhouettes, broad luminous washes, lightly cartoonized forms, and useful color-mixing relationships over realism, detail, or decoration. Default to fresh, water-rich color rather than dense, highly saturated paint.
 
 Use this priority order whenever requirements compete:
 
@@ -38,6 +38,24 @@ Translate the reference into 4–7 dominant shapes or visual layers. Use large, 
 - Retain watercolor transparency, paper grain, slight pigment pooling, and a few natural blooms without fragmenting a shape.
 - Use hard or soft edges intentionally. Do not fill large areas with many small brush marks.
 - Omit decorative additions not present in the reference.
+
+## Keep the Watercolor Luminous
+
+Control pigment strength independently from structural detail. A scene may contain useful form and depth without becoming dark, saturated, or opaque.
+
+- Default to water-rich, low-to-medium chroma washes. Let the warm paper color remain visible through every large colored region.
+- Leave approximately 25–35% of the main painting as untouched or nearly untouched paper, including breathing gaps, light-facing planes, and soft transitions.
+- Keep approximately 70% of painted area in pale-to-middle values, 20–25% in middle-dark values, and no more than 5–10% in concentrated dark accents.
+- Limit the darkest value to small focal anchors and contact shadows. Never fill an entire tree crown, garment, mountain wall, building face, or background zone with near-black paint.
+- Build depth primarily through value temperature, dilution, soft overlap, and edge control—not through uniformly stronger saturation.
+- Neutralize intense source colors with water and a small amount of their complement or earth color when needed. Preserve hue identity while reducing digital-looking saturation.
+- Use one pale first wash per major shape and at most one selective reinforcing pass. Keep the second pass smaller than the first; do not glaze the entire shape again.
+- Reserve fully saturated accent color for one or two small focal elements. Even these accents must show paper grain and slight value variation.
+- Keep shadows colored and transparent. Prefer diluted blue-gray, violet-gray, green-gray, or warm neutral mixtures over opaque black or muddy charcoal.
+- Paint foliage and dark hair as connected translucent mid-dark families with a few concentrated accents, not as solid black silhouettes.
+- Make palette and recipe swatches look like real watercolor tests: translucent edges, visible paper, a pale diluted stage, and a final swatch no denser than the corresponding painted area.
+
+Reject results that resemble marker fill, flat digital cel color, opaque gouache, poster paint, oil paint, or heavily inked illustration. If a generated result is too vivid, regenerate by reducing pigment load and dark-area coverage while preserving the same structure and detail count.
 
 Treat the reference as source material, not as a checklist. Recognition must come from the outer silhouette, dominant color planes, spatial arrangement, and at most four high-value anchors. Do not preserve a feature merely because it is visible.
 
@@ -117,7 +135,7 @@ Do not claim chemically exact pigment ratios from pixels. Treat the recipes as v
 
 ## Layout and Prompt Requirements
 
-Use a warm-white cold-press watercolor-paper background and a landscape board with generous margins.
+Use a warm-white cold-press watercolor-paper background and a landscape board with generous margins. Make the paper itself the principal light source throughout the board.
 
 - Allocate roughly 60–65% of the board to the complete painting.
 - Allocate up to 20–25% to the bottom element row; reduce or omit this area when only one or no complete standalone element qualifies.
@@ -130,6 +148,8 @@ Include the following ideas explicitly in the generation prompt:
 ```text
 Treat the reference as source material, not as a checklist. Repaint it as a highly simplified transparent-watercolor study using only 4–7 large continuous shapes. Recognition must come from the outer silhouette, dominant color planes, overall spatial arrangement, and no more than four selected recognition anchors. Use broad calm washes, one or two washes per shape, and generous untouched paper. Beyond the large masses, allow about 10–16 deliberate internal marks in the complete painting. Represent any repeated system with at most 3–5 marks rather than drawing every unit. Omit nonessential features smaller than roughly 2% of the main painting width. Merge small textures, fixtures, thin lines, gaps, highlights, local shadows, and repeated details into larger color masses. Do not replace omitted details with dense outlines.
 
+Use fresh, water-rich, low-to-medium chroma watercolor rather than dense saturated fill. Leave about 25–35% of the main painting as untouched or nearly untouched paper. Keep about 70% of painted area pale-to-middle value, 20–25% middle-dark, and at most 5–10% concentrated dark accents. Let warm paper show through every large colored shape. Start each shape with one pale wash and reinforce only a smaller selected area; never glaze the entire shape into uniform darkness. Create depth with dilution, temperature shifts, transparent overlap, and edge contrast rather than strong saturation. Neutralize overly vivid source colors with water and a restrained complementary or earth mixture. Keep shadows transparent and colored; avoid black-filled trees, hair, clothing, mountains, buildings, and backgrounds. Reserve the strongest color for one or two small focal accents only.
+
 For architecture, preserve the building silhouette, 2–5 main color planes, perspective direction, and at most four architectural anchors. For trees and plants, preserve a connected crown or plant silhouette, at most three tonal variations, and 3–5 broad structural gestures when useful. For clouds or terrain, preserve the outer contour and 2–4 broad shadow regions. For objects, food, or vehicles, preserve the silhouette, 2–5 color planes, and at most four category-defining features or broad content divisions.
 
 If people appear, reinterpret them as easy-to-draw, lightly cartoonized editorial watercolor characters. Build each person from a simple head, torso, limb, hair, and clothing shapes; use only 3–5 minimal facial marks; simplify hands, anatomy, folds, accessories, and shading. Preserve pose, hairstyle silhouette, glasses or other key cues, dominant outfit colors, and the action. Prioritize clarity and ease of painting over exact facial likeness. Avoid photorealistic portrait rendering, complex anatomy, detailed fingers, fabric texture, and dense facial features.
@@ -137,6 +157,8 @@ If people appear, reinterpret them as easy-to-draw, lightly cartoonized editoria
 Along the bottom, show 1–3 complete standalone scene elements from the reference. They may be primary subjects or secondary elements such as a whole tree, recognizable building, vehicle, lamp, bench, flower cluster, food grouping, or complete figure. Choose by completeness, independence, distinctiveness, and ease of painting rather than narrative importance. Every element must be nameable by itself and retain a coherent whole silhouette with its essential parts, but use no more than five internal recognition marks. Preserve natural groupings. Fewer elements are preferable; one is acceptable, and omit the row if none qualifies. Reject lone branches, half trees, partial walls, roof fragments, cropped object pieces, color patches, sky washes, shadows, and atmosphere. Never split an object by color, lighting, depth, or texture, and never invent hidden portions or duplicate items to fill the row.
 
 On the right, create 4–6 aligned visual mixing-recipe rows rather than a conventional palette. Each row must read left-to-right as base pigment swatch + base pigment swatch, optionally plus a diluted-water or neutral swatch, then an arrow to an intermediate mixture and a final target-color swatch used visibly in the main painting. Vary source-swatch sizes to suggest approximate mixing proportions. Reuse a compact set of 3–5 base pigments across the rows.
+
+Render every recipe swatch as a translucent watercolor test on paper. Include a visibly diluted stage where useful, keep paper grain visible inside the target swatches, and match their concentration to the luminous painting rather than presenting dense digital color chips.
 
 Delete unit-by-unit windows, rails, balusters, bricks, leaves, petals, cloud puffs, cables, seams, trim, hardware, tiny shadows, and surface texture unless represented by a few broad marks or selected as one of the four recognition anchors. No long text, HEX codes, watermark, invented subjects, decorative objects, dense brushwork, tiny facets, photorealism, opaque paint, or unrelated palette swatches.
 ```
@@ -147,6 +169,10 @@ Before delivering, verify all of the following:
 
 - The complete painting is recognizable but clearly simpler than the reference.
 - Large color masses dominate; details do not dominate.
+- The painting reads as water-rich transparent watercolor rather than dense digital color or opaque paint.
+- Approximately 25–35% of the main painting remains untouched or nearly untouched paper.
+- Concentrated darks occupy no more than about 5–10% of the painted area and remain focal accents rather than large filled regions.
+- Large shapes retain visible paper luminosity; structure comes from dilution, temperature, overlap, and edges rather than excessive saturation.
 - The complete painting uses no more than four explicitly preserved recognition anchors.
 - The complete painting contains roughly 10–16 deliberate internal marks beyond its large color masses.
 - Repeated structures are suggested with at most 3–5 representative marks rather than rendered unit by unit.
@@ -162,4 +188,5 @@ Before delivering, verify all of the following:
 - The right panel contains readable input-to-output mixing sequences.
 - Each final target color appears in the main painting.
 - A small base pigment set is reused across multiple recipes.
+- Recipe swatches are translucent, show dilution logic, and do not become denser than the colors used in the painting.
 - No hallucinated subjects, duplicated focal elements, malformed text, or watermark appears.

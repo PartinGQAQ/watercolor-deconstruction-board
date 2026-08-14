@@ -1,6 +1,6 @@
 ---
 name: watercolor-deconstruction-board
-description: Convert a supplied photo or illustration into an easy-to-paint, highly simplified watercolor study board with broad color shapes, lightly cartoonized people, a small set of complete standalone scene elements, and visual mixing recipes that show how base pigments produce the colors used in the painting. Standalone elements may be primary subjects or secondary but complete objects such as a whole tree, building, vehicle, lamp, flower cluster, or piece of furniture. Use when the user asks to turn an image into simple or cartoon watercolor, make a reference easier to draw or copy, reduce it to broad color blocks, isolate complete scene elements, extract its palette, explain watercolor color mixing, or create a watercolor decomposition, study, reference, or teaching sheet.
+description: Convert a supplied photo or illustration into an easy-to-paint watercolor teaching board with broad luminous color shapes, lightly cartoonized people, a four-stage cumulative painting sequence, complete standalone scene-element studies, and visual mixing recipes that show how base pigments produce the colors used. Use when the user asks to turn an image into simple or cartoon watercolor, learn the order for laying watercolor washes, make a reference easier to draw or copy, reduce it to broad color blocks, isolate complete scene elements without redesigning them, extract its palette, explain watercolor color mixing, or create a watercolor decomposition, study, reference, or teaching sheet.
 ---
 
 # Watercolor Deconstruction Board
@@ -17,14 +17,15 @@ Use this priority order whenever requirements compete:
 ## Workflow
 
 1. Inspect the reference image before generating.
-2. Identify the complete scene, 1–3 semantically and visually complete standalone elements, 4–6 target colors, and the smallest plausible set of base pigments needed to mix them.
+2. Identify the complete scene, its four cumulative painting stages, 1–3 semantically and visually complete standalone elements, 4–6 target colors, and the smallest plausible set of base pigments needed to mix them.
 3. Write a simplification plan before prompting: choose no more than four recognition anchors for the complete painting, define the large color masses, classify any architecture as focal or supporting, and list everything else for deletion or merging.
 4. Treat the supplied image as the edit target or sole content reference. Use the image generation tool in edit mode and preserve recognizable content and relationships.
 5. Compose one board containing:
-   - a simplified complete watercolor painting with an irregular, open paper edge in the upper-left or center;
+   - four small cumulative painting-stage thumbnails across the top;
+   - a simplified complete watercolor painting with an irregular, open paper edge below the process row;
    - a small number of complete standalone scene-element studies along the bottom;
    - a color-mixing recipe panel on the right.
-6. Inspect the result. Regenerate if secondary details compete with the silhouette, repeated structures are individually rendered, a bottom study is only a color region or arbitrary fragment, an element lacks a coherent whole silhouette, the studies overlap, or the right panel reads as an ordinary palette instead of mixing recipes.
+6. Inspect the result. Regenerate if the four stages change composition or subject geometry, a later stage is not visibly cumulative, secondary details compete with the silhouette, repeated structures are individually rendered, a bottom study is redesigned or only a fragment, the studies overlap, or the right panel reads as an ordinary palette instead of mixing recipes.
 
 ## Build with Large Shapes, Then Add Selective Sketch Detail
 
@@ -128,6 +129,21 @@ Render people as charming, lightly cartoonized watercolor characters unless the 
 
 Do not make the person photorealistic, semi-realistic, anatomically intricate, fashion-illustration detailed, chibi, exaggerated comic, or anime unless the user explicitly requests that variant. Default to gentle editorial cartoon watercolor: recognizable, tasteful, and simple.
 
+## Show the Painting Order Above the Main Image
+
+Place four small cumulative thumbnails in one horizontal row above the completed painting. Use them to teach a beginner where to add color next. All four thumbnails must preserve exactly the same crop, placement, proportions, silhouettes, pose, and essential spatial relationships. Treat them as saved states of one painting: each later stage may add paint or a few marks but must not redraw, reinterpret, or redesign the scene.
+
+1. **Pale placement wash:** Establish the lightest large silhouettes and atmosphere with highly diluted color. Preserve highlights as untouched paper.
+2. **Broad local-color masses:** Add the main continuous color shapes. Do not add texture, small features, or unit-by-unit detail.
+3. **Transparent shadow layer:** Reinforce only selected overlaps, undersides, and back-facing planes to establish depth. Do not darken every shape uniformly.
+4. **Sparse recognition accents:** Add only the few broken contours, dark accents, and identity cues needed to make the scene read clearly, then stop.
+
+- Keep the row compact, normally about 18–22% of the board height, so it does not overpower the completed painting or force the bottom studies to become cramped.
+- Use the same simplification plan and large-shape map in every stage. Shape boundaries may become clearer as paint accumulates, but they may not move.
+- Make the progression visually cumulative: stage 2 must visibly contain stage 1, stage 3 must visibly contain stage 2, and stage 4 must visibly contain stage 3.
+- Use simple numerals `1–4` rather than long generated instructions inside the image.
+- Keep each thumbnail's watercolor perimeter irregular and open. Do not turn the sequence into four framed photographs or four separately finished paintings.
+
 ## Isolate Complete Scene Elements
 
 Place 1–3 complete standalone element studies along the bottom. These elements do not need to be the main subject. A secondary scene object is valid when it forms a coherent, independently recognizable whole. Prefer fewer convincing elements over a full row of forced fragments; one element is acceptable.
@@ -141,6 +157,7 @@ Include an element only when both answers are yes. Rank candidates by completene
 
 - Allow people, animals, plants, props, and architecture equally. Valid examples include a complete person, whole tree, recognizable building, car, bicycle, streetlamp, bench, chair, boat, flower cluster, potted plant, mountain, moon, or coherent group such as a flower-and-leaf sprig.
 - Preserve natural grouping and attachment. Keep a person with essential clothing and action-defining held objects; keep a tree with its trunk and crown; keep a building with its overall mass, roof or top termination, and base where visible; keep a cup with its handle.
+- Treat isolation as removal of surrounding environment, never as permission to redesign the subject. Preserve the observed pose, orientation, proportions, outer silhouette, crop logic, drape, expression, and necessary support or attachment. If removing a support would change the subject's pose or meaning, retain a short simplified portion of that support. Do not straighten, symmetrize, beautify, front-face, unwrap, re-pose, or convert the subject into a catalog-style version.
 - Allow a conventional self-contained study such as one whole leaf, blossom, shell, or fruit when it has a complete silhouette.
 - Select a background or secondary element even when it is not compositionally dominant, provided it passes both tests.
 - Do not select a structurally complex supporting building, balcony, railing, or facade merely to fill the bottom row. Choosing an element for isolation must not cause the same element to become more detailed or prominent in the main painting. Prefer one strong standalone study over adding a second architecture study that would distort the scene hierarchy.
@@ -172,8 +189,9 @@ Do not claim chemically exact pigment ratios from pixels. Treat the recipes as v
 
 Use a warm-white cold-press watercolor-paper background and a landscape board with generous margins. Make the paper itself the principal light source throughout the board. Reserve a layout region for the main painting without drawing or filling that region as a rectangle.
 
-- Allocate roughly 60–65% of the board to the complete painting.
-- Allocate up to 20–25% to the bottom element row; reduce or omit this area when only one or no complete standalone element qualifies.
+- Allocate roughly 18–22% of the board height to the four-stage process row across the top.
+- Allocate roughly 45–55% of the board to the complete painting below the process row.
+- Allocate up to 15–20% of the board height to the bottom element row; reduce or omit this area when only one or no complete standalone element qualifies.
 - Allocate roughly 15–20% to the right mixing panel.
 - Keep the entire sheet spacious, editorial, balanced, and easy to scan.
 - Preserve the reference's dominant palette and mood while reducing its complexity.
@@ -185,13 +203,15 @@ Treat the reference as source material, not as a checklist. Repaint it as a medi
 
 Use fresh, water-rich, low-to-medium chroma watercolor rather than dense saturated fill. Leave about 25–35% of the main painting as untouched or nearly untouched paper. Keep about 70% of painted area pale-to-middle value, 20–25% middle-dark, and at most 5–10% concentrated dark accents. Let warm paper show through every large colored shape. Start each shape with one pale wash and reinforce only a smaller selected area; never glaze the entire shape into uniform darkness. Create depth with dilution, temperature shifts, transparent overlap, and edge contrast rather than strong saturation. Neutralize overly vivid source colors with water and a restrained complementary or earth mixture. Keep shadows transparent and colored; avoid black-filled trees, hair, clothing, mountains, buildings, and backgrounds. Reserve the strongest color for one or two small focal accents only.
 
+Across the top, show four small cumulative painting stages of exactly the same composition, numbered only 1, 2, 3, and 4. Preserve identical crop, placement, proportions, silhouettes, pose, and subject geometry in every stage. Treat them as saved states of one painting rather than four reinterpretations: later stages may only add paint or marks. Stage 1 shows the palest diluted placement wash and untouched highlights. Stage 2 adds the broad continuous local-color masses without texture. Stage 3 adds one selective transparent shadow layer to explain overlap and depth. Stage 4 adds only a few broken contours, concentrated accents, and recognition cues, then stops. Every stage must visibly contain the previous stage. Keep the row compact, with irregular open watercolor edges and no rectangular frames.
+
 Place the main scene as a floating watercolor study with an open, asymmetric perimeter—not as a rectangular image panel. Keep the focal subject and essential perspective coherent, then dissolve secondary information through the outer 15–25% using broken dry-brush endings, pale blooms, lost edges, interrupted contours, and untouched paper gaps. At least three sides must visibly fade or break into the paper. Never create four straight crop edges, a full rectangular sky or background wash, a masking-tape border, a square vignette, or a framed postcard. Reduce contrast, saturation, line density, and detail toward the perimeter while keeping the selected recognition anchors clearer near the focal area. If the reference is cropped at its edges, translate peripheral cropped forms into soft broken masses rather than hard photo-like bars.
 
 Classify architecture before prompting. If a building is focal, preserve its silhouette, 2–5 main color planes, perspective direction, at most four anchors, a few broken construction lines, and only 3–7 representative repeated marks. If architecture is supporting background, reduce it to one connected silhouette, no more than two broad color planes, and at most three structural hints total: for example one facade edge, one platform rhythm, and one opening mass. Show windows as tonal blocks without frames, balconies as platform silhouettes without railing patterns, and racks or brackets with only 2–3 pale broken strokes across the whole building. Keep supporting architecture lower in contrast, saturation, sharpness, and line density than the focal subject; lose at least half its edges into washes or paper. Delete building lines first whenever they compete with the subject. For a focal tree or plant, preserve a connected silhouette and at most three tonal variations; allow 6–12 complete large leaf shapes or 3–7 broad structural gestures, then merge the rest. For clouds or terrain, preserve the outer contour and 2–4 broad shadow regions. For animals or fish, preserve the complete silhouette, 2–4 body washes, and 3–7 identity marks. For objects, food, or vehicles, preserve the silhouette, 2–5 color planes, and 3–7 category-defining features on the focal object. Keep repeated food units as uninterrupted masses with at most one shadow and 0–2 texture hints each; never render seeds, crumbs, grains, strands, scales, bricks, or wood grain unit by unit.
 
 If people appear, reinterpret them as easy-to-draw, lightly cartoonized editorial watercolor characters. Build each person from a simple head, torso, limb, hair, and clothing shapes; use only 3–5 minimal facial marks; simplify hands, anatomy, folds, accessories, and shading. Preserve pose, hairstyle silhouette, glasses or other key cues, dominant outfit colors, and the action. Prioritize clarity and ease of painting over exact facial likeness. Avoid photorealistic portrait rendering, complex anatomy, detailed fingers, fabric texture, and dense facial features.
 
-Along the bottom, show 1–3 complete standalone scene elements from the reference. They may be primary subjects or secondary elements such as a whole tree, recognizable building, vehicle, lamp, bench, flower cluster, food grouping, or complete figure. Choose by completeness, independence, distinctiveness, and ease of painting rather than narrative importance. Every element must be nameable by itself and retain a coherent whole silhouette with its essential parts. Use approximately 3–8 internal recognition marks, reserving the upper end for structurally complex focal elements. Preserve natural groupings. Fewer elements are preferable; one is acceptable, and omit the row if none qualifies. Do not select a complex supporting building, balcony, railing, or facade merely to fill space, and never increase its detail in the main painting because it was selected for isolation. Reject lone branches, half trees, partial walls, roof fragments, cropped object pieces, color patches, sky washes, shadows, and atmosphere. Never split an object by color, lighting, depth, or texture, and never invent hidden portions or duplicate items to fill the row.
+Along the bottom, show 1–3 complete standalone scene elements from the reference. They may be primary subjects or secondary elements such as a whole tree, recognizable building, vehicle, lamp, bench, flower cluster, food grouping, or complete figure. Choose by completeness, independence, distinctiveness, and ease of painting rather than narrative importance. Every element must be nameable by itself and retain a coherent whole silhouette with its essential parts. Isolation removes surrounding environment only: preserve the observed pose, orientation, proportions, silhouette, drape, expression, crop logic, and any support or attachment required to explain the pose. If needed, retain a short simplified part of the support instead of redesigning the subject. Never straighten, symmetrize, front-face, unwrap, re-pose, beautify, or convert it into a catalog-style object. Use approximately 3–8 internal recognition marks, reserving the upper end for structurally complex focal elements. Preserve natural groupings. Fewer elements are preferable; one is acceptable, and omit the row if none qualifies. Do not select a complex supporting building, balcony, railing, or facade merely to fill space, and never increase its detail in the main painting because it was selected for isolation. Reject lone branches, half trees, partial walls, roof fragments, cropped object pieces, color patches, sky washes, shadows, and atmosphere. Never split an object by color, lighting, depth, or texture, and never invent hidden portions or duplicate items to fill the row.
 
 On the right, create 4–6 aligned visual mixing-recipe rows rather than a conventional palette. Each row must read left-to-right as base pigment swatch + base pigment swatch, optionally plus a diluted-water or neutral swatch, then an arrow to an intermediate mixture and a final target-color swatch used visibly in the main painting. Vary source-swatch sizes to suggest approximate mixing proportions. Reuse a compact set of 3–5 base pigments across the rows.
 
@@ -205,6 +225,9 @@ Delete unit-by-unit windows, rails, balusters, bricks, leaves, petals, cloud puf
 Before delivering, verify all of the following:
 
 - The complete painting is recognizable but clearly simpler than the reference.
+- Four compact cumulative painting stages appear above the main image in the order: pale placement wash, broad local-color masses, transparent shadow layer, and sparse recognition accents.
+- All four stages preserve exactly the same crop, placement, proportions, silhouettes, pose, and subject geometry; each later stage visibly contains the previous stage rather than redrawing it.
+- The process row remains subordinate to the completed painting and does not crowd the bottom studies or mixing panel.
 - Large color masses dominate; details do not dominate.
 - The painting reads as water-rich transparent watercolor rather than dense digital color or opaque paint.
 - Approximately 25–35% of the main painting remains untouched or nearly untouched paper.
@@ -226,6 +249,7 @@ Before delivering, verify all of the following:
 - People retain pose and a few key recognition cues without relying on realistic facial rendering or anatomical detail.
 - Every bottom study is a semantically and visually complete, independently recognizable scene element from the reference.
 - Every bottom study uses its outer silhouette and approximately 3–8 internal recognition marks, scaled to its structural complexity.
+- Every bottom study preserves the reference subject's observed pose, orientation, proportions, drape, expression, crop logic, and necessary support or attachment; isolation removes environment without redesigning the subject.
 - Secondary elements such as complete trees or buildings are eligible even when they are not the main subject.
 - A complex supporting building or balcony is not isolated merely to fill the bottom row, and isolation never forces extra detail into the main scene.
 - No element is a lone branch, cropped structural fragment, partial color region, shadow, or invented completion.
